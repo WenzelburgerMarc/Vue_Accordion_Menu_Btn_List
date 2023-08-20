@@ -9,11 +9,7 @@ import DarkModeToggleBtn from './components/DarkModeToggleBtn.vue';
 
       <h1 class="text-black dark:text-white text-xl font-bold ml-5 mt-5 mr-1">Accordion Menu Button Demo</h1>
       <DarkModeToggleBtn class="mr-5 mt-5 ml-1" />
-
-
     </div>
-
-
 
     <div class="m-5">
       <AccordionBtn />
