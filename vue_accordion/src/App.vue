@@ -1,6 +1,33 @@
 <script setup lang="ts">
-import AccordionBtn from './components/AccordionBtn.vue';
 import DarkModeToggleBtn from './components/DarkModeToggleBtn.vue';
+
+import AccordionBtn from './components/AccordionMenuButton/AccordionBtn.vue';
+import { AccordionBtnItemList } from './components/AccordionMenuButton/AccordionBtnItemListType.ts';
+
+const itemArrayPayments: AccordionBtnItemList[] = [
+  {
+    title: 'Income',
+    actionEvent: () => {
+      console.log('Income');
+    },
+    isLastElement: false
+  },
+  {
+    title: 'Expenses',
+    actionEvent: () => {
+      console.log('Expenses');
+    },
+    isLastElement: false
+  },
+  {
+    title: 'Investments',
+    actionEvent: () => {
+      console.log('Investments');
+    },
+    isLastElement: true
+  }
+];
+
 </script>
 
 <template>
@@ -12,7 +39,7 @@ import DarkModeToggleBtn from './components/DarkModeToggleBtn.vue';
     </div>
 
     <div class="m-5">
-      <AccordionBtn />
+      <AccordionBtn title="Savings" icon-class="bx-money" :item-array="itemArrayPayments" />
     </div>
 
   </div>
